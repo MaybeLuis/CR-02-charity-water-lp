@@ -37,7 +37,11 @@ body {
   /* Use a stack of linear gradients to create the layered effect */
   min-height: 100vh;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  /* Use Proxima Nova, then Avenir, then fall back to sans-serif */
+  font-family: Proxima Nova, Avenir, sans-serif;
+  /* Make all text larger and bolder for better readability */
+  font-size: 1.25rem; /* Increase base font size */
+  font-weight: 600;   /* Make base text semi-bold */
   /* The gradients are layered from top to bottom */
   background:
     /* Blue stripe */
@@ -51,3 +55,81 @@ body {
     /* Yellow left side */
     linear-gradient(110deg, #FFC907 0%, #FFC907 55%, transparent 56%);
 }
+
+/* Align headings and subheadings to the left, but center them vertically in the left half of the page */
+#hero {
+  /* Use flex to center content vertically */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Take up at least 60% of the viewport height */
+  min-height: 60vh;
+  /* Align to the left and add padding from the left edge */
+  align-items: flex-start;
+  padding-left: 5vw;
+}
+
+#hero h1, #hero p {
+  /* Align text to the left */
+  text-align: left;
+}
+
+/* Make headings and important text larger and bolder */
+#hero h1 {
+  font-size: 3rem;      /* Large main heading */
+  font-weight: 800;     /* Extra bold */
+}
+
+#hero p {
+  font-size: 1.5rem;    /* Larger subheading */
+  font-weight: 700;     /* Bold */
+}
+
+#story h2, #cta h2 {
+  font-size: 2rem;      /* Large subheadings */
+  font-weight: 800;     /* Extra bold */
+}
+
+#story p {
+  font-size: 1.25rem;   /* Slightly larger paragraph */
+  font-weight: 600;     /* Semi-bold */
+}
+
+#cta .cta-button {
+  font-size: 1.25rem;   /* Larger button text */
+  font-weight: 700;     /* Bold */
+}
+
+/* Style the story section to align with the hero section, just below it */
+#story {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 5vw;
+  max-width: 700px;
+  /* Add space above the story section to push it up but leave a gap */
+  margin-top: 30px;
+}
+#story h2, #story p {
+  text-align: left;
+}
+
+#cta h2 {
+  /* Move the call-to-action heading to the right */
+  text-align: right;
+  margin-right: 5vw;
+}
+
+/* Move the call-to-action button to the right */
+#cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 5vw;
+}
+
+#cta .cta-button {
+  /* Add some margin above the button for spacing */
+  margin-top: 10px;
+}
+
