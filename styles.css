@@ -24,3 +24,30 @@ Fonts:
 */
 
 /* Set up the main font and background color for the whole page */
+
+/*
+  The following styles create a background similar to the screenshot:
+  - Yellow left side
+  - Blue right side
+  - Diagonal white and gray bands
+  - A blue stripe
+  This is done using a CSS linear-gradient background on the body.
+*/
+body {
+  /* Use a stack of linear gradients to create the layered effect */
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  /* The gradients are layered from top to bottom */
+  background:
+    /* Blue stripe */
+    linear-gradient(110deg, transparent 55%, #2E9DF7 55%, #2E9DF7 70%, transparent 1%),
+    /* Blue right side */
+    linear-gradient(110deg, transparent 70%, #003366 69%),
+    /* Gray band */
+    linear-gradient(200deg, transparent 69%, #d1d1d1 10%, #d1d1d1 100%, transparent 8%),
+    /* Off-white band */
+    linear-gradient(200deg, transparent 52%, #fdf6e3 2%, #fdf6e3 60%),
+    /* Yellow left side */
+    linear-gradient(110deg, #FFC907 0%, #FFC907 55%, transparent 56%);
+}
