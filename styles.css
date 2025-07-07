@@ -43,21 +43,35 @@ section {
 
 /* Hero Section Styles */
 .hero {
-  position: relative; /* Needed for overlay */
-  /* Set a background image that covers the whole section */
-  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');
-  background-size: cover;      /* Make the image cover the whole area */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat;
-  color: #fff;                 /* White text for contrast */
-  text-align: center;          /* Center the text */
-  padding: 60px 20px;          /* Add space above and below */
-  border-radius: 0 0 16px 16px; /* Only round bottom corners */
+/* ...existing code... */
 
-  /* Add a dark overlay for better text readability */
-  /* This uses a simple linear-gradient overlay */
-  background-blend-mode: darken;
-  background-color: rgba(46, 157, 247, 0.45); /* Blue overlay */
+/* Hero Section Styles */
+.hero {
+  /* Use a linear-gradient to create angled color bands */
+  background: linear-gradient(
+    110deg, 
+    #FFC907 0%,      /* Yellow */
+    #FFC907 40%,     /* Yellow ends */
+    #FFF6DC 41%,     /* Cream starts */
+    #FFF6DC 54%,     /* Cream ends */
+    #D1D3D4 55%,     /* Gray starts */
+    #D1D3D4 68%,     /* Gray ends */
+    #2E9DF7 69%,     /* Blue starts */
+    #2E9DF7 78%,     /* Blue ends */
+    #003366 79%,     /* Dark blue starts */
+    #003366 100%     /* Dark blue ends */
+  );
+  color: #222;                 /* Dark text for contrast */
+  text-align: left;            /* Align text to the left */
+  padding: 60px 40px 40px 40px;/* Add space above and below */
+  border-radius: 0 0 16px 16px;/* Only round bottom corners */
+  min-height: 420px;           /* Make hero section tall */
+  position: relative;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07); /* Soft blue shadow */
+}
+
+/* ...existing code... */
 }
 
 /* Make the headline bold and modern */
