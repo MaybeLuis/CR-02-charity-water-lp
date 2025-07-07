@@ -1,3 +1,51 @@
+/* Overlay container for the icon on the photo */
+.photo-overlay-container {
+  position: absolute;
+  top: 20.5px;
+  right: 14.5vw;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Style for the overlay icon */
+.photo-overlay-icon {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  display: block;
+  /* Add a little drop shadow for visibility */
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.10));
+}
+
+/* Make sure the main-content-with-photo is positioned for absolute overlay */
+.main-content-with-photo {
+  position: relative;
+}
+/* Layout for main content and photo on the right */
+.main-content-with-photo {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* Style for the right-aligned photo */
+.main-photo {
+  margin-top: 0;
+  margin-right: 10vw;
+  align-self: flex-start;
+  border: 10px solid #FFC907;
+  border-radius: 15px; /* Slightly rounded corners */
+  box-sizing: border-box;
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  opacity: 1;}
 /* charity: water Brand Colors & Fonts
 
 Primary Colors:

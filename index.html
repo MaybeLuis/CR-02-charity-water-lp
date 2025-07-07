@@ -20,7 +20,9 @@
   </div>
   <div class="with-top-bar">
   <!-- Hero Section -->
-    <section id="hero">
+    <div class="main-content-with-photo">
+      <div style="flex:1; min-width:0;">
+        <section id="hero">
     <!-- Main heading for the page -->
     <h1>Make your Voice Flow Further</h1>
     <!-- Short description under the heading -->
@@ -39,12 +41,34 @@
   </section>
 
   <!-- Call-to-Action Section -->
-    <section id="cta">
+          <section id="cta">
+      </div>
+      <img src="img/Photo1.png" alt="Charity Water Project" class="main-photo" id="slideshow-photo">
+      <!-- Overlay PNG at the top right of the photo, not crossing the outline -->
+      <div class="photo-overlay-container">
+        <img src="img/water-can-transparent.png" alt="Water Can Icon" class="photo-overlay-icon">
+      </div>
+    </div>
     <!-- Subheading for the call to action -->
     <h2>Make a Difference Today</h2>
     <!-- A button for users to take action -->
     <a href="#" class="cta-button">Donate Now</a>
   </section>
 </div>
+</div>
+<script>
+// Crossfade slideshow for the main photo
+const images = [
+  'img/Photo1.png',
+  'img/Photo2.png',
+  'img/Photo3.png'
+];
+let current = 0;
+const photo = document.getElementById('slideshow-photo');
+setInterval(() => {
+  current = (current + 1) % images.length;
+  photo.src = images[current];
+}, 6000);
+</script>
 </body>
 </html>
