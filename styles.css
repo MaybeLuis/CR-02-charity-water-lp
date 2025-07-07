@@ -40,7 +40,7 @@ body {
   /* Use Proxima Nova, then Avenir, then fall back to sans-serif */
   font-family: Proxima Nova, Avenir, sans-serif;
   /* Make all text larger and bolder for better readability */
-  font-size: 1.25rem; /* Increase base font size */
+  font-size: 1.29rem; /* Increase base font size by about 3% */
   font-weight: 600;   /* Make base text semi-bold */
   /* The gradients are layered from top to bottom */
   background:
@@ -67,36 +67,52 @@ body {
   /* Align to the left and add padding from the left edge */
   align-items: flex-start;
   padding-left: 5vw;
+  max-width: 700px; /* Keep content concise and prevent text from running off */
+  width: 100%;
 }
 
+/* Align the heading and subheading to the left and keep them together */
 #hero h1, #hero p {
-  /* Align text to the left */
   text-align: left;
+  width: 100%;
 }
 
 /* Make headings and important text larger and bolder */
 #hero h1 {
-  font-size: 3rem;      /* Large main heading */
-  font-weight: 800;     /* Extra bold */
+  font-size: 3.3rem;      /* Large main heading, increased by ~3% */
+  font-weight: 800;       /* Extra bold */
+  margin-bottom: 0.5em;   /* Add space below heading */
+  margin-top: 0.5em;      /* Add space above heading */
 }
 
 #hero p {
-  font-size: 1.5rem;    /* Larger subheading */
-  font-weight: 700;     /* Bold */
+  font-size: 1.29rem;      /* Slightly increased by ~3% */
+  font-weight: 500;        /* Not as bold as heading */
+  max-width: 480px;        /* Keep concise */
+  margin-top: 0;           /* Remove extra space above */
+  margin-bottom: 2em;      /* Add space below for separation */
+  word-break: break-word;
+  line-height: 1.4;        /* Set line spacing for subheading */
 }
 
 #story h2, #cta h2 {
-  font-size: 2rem;      /* Large subheadings */
-  font-weight: 800;     /* Extra bold */
+  font-size: 2.27rem;      /* Increased by ~3% */
+  font-weight: 700;       /* Bold but not as bold as main heading */
+  margin-bottom: 0.2em;   /* Less space below */
+  margin-top: 0.5em;      /* Add space above */
 }
 
 #story p {
-  font-size: 1.25rem;   /* Slightly larger paragraph */
-  font-weight: 600;     /* Semi-bold */
+  font-size: 1.08rem;     /* Increased by ~3% */
+  font-weight: 500;       /* Normal weight */
+  color: #222;            /* Dark text for readability */
+  margin-top: 0;          /* Remove extra space above */
+  margin-bottom: 1em;     /* Add space below */
+  line-height: 1.8;       /* Set line spacing for story paragraph */
 }
 
 #cta .cta-button {
-  font-size: 1.25rem;   /* Larger button text */
+  font-size: 1.29rem;   /* Larger button text, increased by ~3% */
   font-weight: 700;     /* Bold */
 }
 
@@ -106,9 +122,9 @@ body {
   flex-direction: column;
   align-items: flex-start;
   padding-left: 5vw;
-  max-width: 700px;
+  max-width: 500px;
   /* Add space above the story section to push it up but leave a gap */
-  margin-top: 30px;
+  margin-top: -60px;
 }
 #story h2, #story p {
   text-align: left;
@@ -132,4 +148,3 @@ body {
   /* Add some margin above the button for spacing */
   margin-top: 10px;
 }
-
