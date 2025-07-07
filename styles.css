@@ -15,13 +15,77 @@ Secondary Colors:
 Fonts:
 - Proxima Nova
 - Avenir
-
-*/
-
 /* 
   Charity: Water Landing Page Styles
   This CSS uses the provided color palette and beginner-friendly styles.
-*/
+
+
+
+/* White bar with black outline at the top, ending halfway to the heading */
+.top-bar {
+  width: 100%;
+  height: 90px; /* Taller bar to reach halfway to heading */
+  background: #fff;
+  border-bottom: 2px solid #000;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding-left: 24px; /* Space from the left edge */
+  gap: 32px; /* Space between logo, search box, and link */
+}
+
+/* Style the WHY WATER? link */
+.top-bar .why-water-link {
+  display: inline-block;
+  background: #e0e0e0;
+  color: #222;
+  font-size: 1.1rem;
+  padding: 10px 22px;
+  border-radius: 18px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 8px;
+  transition: background 0.2s, text-decoration-color 0.2s, color 0.2s;
+}
+.top-bar .why-water-link:hover {
+  background: #bdbdbd;
+  color: #222;
+  text-decoration: underline;
+  text-decoration-color: #FFC907;
+}
+
+/* Style the search box in the top bar */
+.top-bar .search-box {
+  height: 44px;
+  width: 260px;
+  border-radius: 22px; /* Fully rounded ends */
+  border: 2px solid #444;
+  background: #f7f7f7;
+  color: #222;
+  font-size: 1.1rem;
+  padding: 0 18px;
+  outline: none;
+  transition: border-color 0.2s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.top-bar .search-box:focus {
+  border-color: #2E9DF7;
+  background: #fff;
+}
+
+/* Style the logo image inside the top bar */
+.top-bar .logo {
+  height: 200px;
+  width: auto;
+  display: block;
+}
+
+/* Add space below the top bar so content doesn't hide under it */
+.with-top-bar {
+  margin-top: 60px;
+}
 
 /* Set up the main font and background color for the whole page */
 
@@ -63,7 +127,7 @@ body {
   flex-direction: column;
   justify-content: center;
   /* Take up at least 60% of the viewport height */
-  min-height: 60vh;
+  min-height: 40vh;
   /* Align to the left and add padding from the left edge */
   align-items: flex-start;
   padding-left: 5vw;

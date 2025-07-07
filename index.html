@@ -8,9 +8,19 @@
 </head>
 <body>
   <!-- Top white bar with black outline -->
-  <div class="top-bar"></div>
+  <div class="top-bar">
+    <!-- Logo aligned to the far left inside the top bar -->
+    <img src="img/charitywater_logo_horizontal_AllBlack.png" alt="charity: water logo" class="logo">
+    <!-- Search box next to the logo, always redirects to charitywater.org -->
+    <form class="search-form" onsubmit="window.location.href='https://www.charitywater.org/'; return false;">
+      <input type="text" class="search-box" placeholder="Search . . ." onfocus="this.placeholder=''" onblur="this.placeholder='Search . . .'">
+    </form>
+    <!-- WHY WATER? link styled as a button -->
+    <a href="https://www.charitywater.org/global-water-crisis" class="why-water-link" target="_blank">WHY WATER?</a>
+  </div>
+  <div class="with-top-bar">
   <!-- Hero Section -->
-  <section id="hero">
+    <section id="hero">
     <!-- Main heading for the page -->
     <h1>Make your Voice Flow Further</h1>
     <!-- Short description under the heading -->
@@ -19,7 +29,7 @@
   </section>
 
   <!-- Story Section -->
-  <section id="story">
+    <section id="story">
     <!-- Subheading for the story -->
     <h2>Our Story</h2>
     <!-- A simple paragraph telling the story -->
@@ -29,11 +39,12 @@
   </section>
 
   <!-- Call-to-Action Section -->
-  <section id="cta">
+    <section id="cta">
     <!-- Subheading for the call to action -->
     <h2>Make a Difference Today</h2>
     <!-- A button for users to take action -->
     <a href="#" class="cta-button">Donate Now</a>
   </section>
+</div>
 </body>
 </html>
